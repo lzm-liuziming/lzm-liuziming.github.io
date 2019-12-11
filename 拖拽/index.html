@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        #box{
+            width:100px;
+            height: 100px;
+            position: absolute;
+            border-radius: 50%;
+            background: #cccccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" v-no1>
+
+    </div>
+    
+</body>
+</html>
+<script src="vue.js"></script>
+<script>
+    // Vue.directive('no1',function(dom,a,b,c){  //第一个参数 dom 元素   第二个  数据
+    // // var div=document.createElement('div')
+    // // div.innerHTML = 'hello'
+    // // dom.appendChild(div)
+    // //     console.log(dom,a,b,c)
+  
+
+    //  })
+    // Vue.directive('no1',{
+    //     bind(a){
+    //         console.log(1,a)
+    //     },
+    //     inserted(a){
+    //         // console.log(2,a)
+    //         var div=a.getElementsByTagName('div');
+    //         console.log(0,div.length)
+    //     },
+    //     update(a){
+    //         console.log(3,a)
+    //         var div=a.getElementsByTagName('div');
+    //         console.log(1,div.length)
+    //     },
+    //     componentUpdated(a){  //组件修改
+    //         console.log(4,a)
+    //         var div=a.getElementsByTagName('div');
+    //         console.log(0,div.length)
+    //     },
+    //     unbind(a){
+    //         console.log(5,a)
+    //     }
+
+    // })
+
+        Vue.directive('no1',{
+            inserted(dom){
+                dom.onmousedown=function(ev){
+                    var evt = ev || event;
+                    var aX = evt.offsetX;
+                    var aY = evt.offsetY;
+                    onmousemove = function(ev){
+                        var evt = ev || event;
+                        var mX = evt.clientX - aX;
+                        var mY = evt.clientY - aY;
+
+                        box.style.left = mX + 'px';
+                        box.style.top = mY + 'px';
+                    }
+                    dom.onmouseup = function(){
+                        onmousemove = ''
+                    }
+                }
+            }
+        })
+    new Vue({
+       el:'#box'
+    })
+</script>
