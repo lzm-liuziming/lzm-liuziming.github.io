@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        [v-cloak] {
+            display: none;
+        }
+
+        #box {
+            margin: 0 auto;
+            border: 1px solid black;
+            width: 600px;
+            height: 350px;
+        }
+
+        .b {
+            width:200px;
+            text-align: center;
+            border-right: 1px solid black;
+        }
+
+        .c {
+            width: 600px;
+            height: 300px;
+            float: left;
+        }
+
+        .h {
+            width: 600px;
+        }
+        .color{
+            color: red;
+        }
+        .dnf{
+            width: 100%;
+            border-bottom:1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box" v-cloak=''>
+        <aaa :arr='a' :bis="indexs"></aaa>
+    </div>
+    <template id="aaa">
+        <div>
+            <div v-for="i in json" class="h">
+                <div style="display: flex;" class="dnf">
+                    <div :class="index==ind?'color b':'b'" v-for="(item,index) in i.title" @click="ind=index"  >{{item}}</div>
+                </div>
+                <div>
+                    <div class="c" v-for="(con,index) in i.cont" v-show="index==ind">{{con}}</div>
+                </div>
+            </div>
+        </div>
+    </template>
+</body>
+<script src="vue.js"></script>
+<script src="index.js"></script>
+<script>
+    new Vue({
+        el: '#box',
+        data: {
+            a: [
+                {
+                    title: ['标题一', '标题二', '标题三'],
+                    cont: ['内容一', '内容二', '内容三']
+                }
+            ],
+            indexs:0,
+        }
+    })
+
+
+</script>
+
+</html>
