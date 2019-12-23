@@ -1,0 +1,66 @@
+.no5-box{
+    width:100%;
+}
+
+
+.no5-banner{
+    width:100%;
+    height: 390px;
+    background: #e30083
+}
+.no5-banner img{
+    width:100%;
+    height: 100%;
+}
+
+.no5-left{
+    float: left;
+}
+.no5-s1{
+    background: #cccccc;
+    color:white;
+    height: 37px;
+    margin-bottom: 30px;
+    line-height: 37px;
+}
+.no5-s1 p{
+    padding-left: 15px;
+    display: inline-block;
+}
+.no5-s1 span{
+    padding-right: 15px;
+    float:right;
+}
+.no5-boo{
+    width:1280px;
+    margin:0 auto;
+    overflow: hidden;
+}
+.no5-s2{
+    margin-bottom: 30px;
+}
+.no5-s2 p{
+    font-size: 16px;
+}
+.no5-s2 span{
+    color:#A9A9A9;
+    font-size: 13px;
+}
+.no5-s3{
+    margin-bottom: 50px;
+}
+.no5-s3 p{
+        font-size: 14px;
+        color:#A9A9A9;
+        line-height: 30px;
+}
+.no5-s4 p{
+    font-size: 14px;
+    color:#A9A9A9;
+}
+.no5-right{
+    float: right;
+    width:890px;
+    height: 380px;
+    background: #cccccc;
+}

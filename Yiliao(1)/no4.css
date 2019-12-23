@@ -1,0 +1,101 @@
+.no4-content{
+    width:100%;
+}
+.no4-bbq{
+    width: 1280px;
+    margin:  auto;
+   overflow: hidden; 
+   padding-top: 50px;
+}
+.no4-left{
+    background: #cccccc;
+    color:white;
+    height: 37px;
+    line-height: 37px;
+    border: 1px solid #cccccc;
+    width:248px;
+    float: left;
+    
+}
+.no4-left p{
+    padding-left: 15px;
+    display: inline-block;
+}
+.no4-left span{
+    padding-right: 15px;
+    float:right;
+}
+
+.no4-right{
+    width: 888px;
+    float: left;
+    margin-left: 50px;
+}
+.no4-one{
+    width: 888px;
+    border:1px solid #cccccc;
+    margin-bottom: 50px;
+}
+.no4-tit{
+    width: 828px;
+    height: 50px;
+    margin: 20px auto;
+}
+.tit{
+    padding-left: 30px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+.solit{
+    border:0.5px solid #cccccc;
+    margin-left:20px;
+    margin-right:20px;
+    margin-bottom: 20px;
+}
+.co{
+    padding-left: 30px;
+}
+.co p{
+    width: 425px;
+    float: left;
+    margin-bottom: 10px;
+}
+.co span{
+    font-weight: bold;
+}
+.zhaopin {
+    padding-left: 30px;
+    margin-bottom: 30px;
+}
+.daa{
+    color:#cccccc;
+}
+.miaoshu{
+    padding-left: 30px;
+    margin-bottom: 30px;
+    color:#cccccc;
+}
+.tiaojian{
+    padding-left: 30px;
+    color:#cccccc;
+    margin-bottom: 30px;
+}
+.sma{
+    color:black;
+}
+.dd{
+    border:0.5px solid#cccccc;
+    margin-bottom: 70px;
+}   
+.ff{
+    width:142px;
+    height: 42px;
+    background: rgb(227, 0, 131);
+    text-align: center;
+    line-height: 42px;
+    color:white;
+    margin-left: 30px;
+    margin-bottom: 50px;
+}
+
+

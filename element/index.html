@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="node_modules/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="no1.css">
+    <link rel="stylesheet" href="no2.css">
+    <link rel="stylesheet" href="no3.css">
+    <link rel="stylesheet" href="no3.css">
+    <link rel="stylesheet" href="no4.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #box {
+            background: #fff;
+        }
+
+        /* 页头 */
+        .tit {
+            width: 1320px;
+            height: 88px;
+            margin: 0 auto;
+            overflow: hidden;
+            line-height: 88px;
+
+        }
+
+        .ttt {
+            width: 984px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .logo {
+            width: 183px;
+            height: 65px;
+            float: left;
+            padding-left: 50px;
+            padding-top: 10px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%
+        }
+
+        .nav {
+            float: right;
+            padding-right: 50px;
+            padding-top: 10px;
+        }
+
+
+
+
+        /* 底部 */
+        .footer {
+            width: 100%;
+            overflow: hidden;
+            padding-top: 50px;
+        }
+
+        .footer-food {
+            width: 984px;
+            height: 51px;
+            margin: 0 auto;
+            overflow: hidden;
+            padding-top:
+        }
+
+        .footer-left {
+            float: left;
+            width: 245px;
+            height: 51px;
+            text-align: center;
+            line-height: 51px;
+        }
+
+        .footer-left img {
+            width: 101px;
+            height: 36px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .footer-right {
+            width: 736px;
+            height: 51px;
+            text-align: center;
+            background: #f0f0f0;
+            line-height: 51px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <!-- 页头 -->
+        <div class="tit">
+            <div class="ttt">
+                <!-- logo -->
+                <div class="logo">
+                    <img
+                        src="https://ccdn.goodq.top/caches/c0b2c37cae1f3b474c3b0522b670a440/aHR0cHM6Ly81NGQ0YTNiMjEwY2FlLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTcvMDIvNDVhMmMwMTAxMmY5MzkwNGRhZWNmYzBhZDliZDhhOTYucG5n.png">
+                </div>
+                <!-- 导航 -->
+                <div class="nav">
+                    <el-menu :default-active="activeIndex2" class="el-menu-demo" mode="horizontal"
+                        @select="handleSelect" text-color="#3191cc" active-text-color="#ffd04b">
+                        <el-menu-item index="1"><a href="#/">首页</a></el-menu-item>
+                        <el-submenu index="2">
+                            <template slot="title"><a href="#/no2">关于我们</a></template>
+                            <el-menu-item index="2-1">公司概况</el-menu-item>
+                            <el-menu-item index="2-2">公司荣誉</el-menu-item>
+                        </el-submenu>
+                        <el-menu-item index="3"><a href="#/no3">产品展示</a></el-menu-item>
+                        <el-submenu index="3">
+                            <template slot="title"><a href="#/no4">新闻动态</a></template>
+                            <el-menu-item index="3-1">公司新闻</el-menu-item>
+                            <el-menu-item index="3-2">行业动态</el-menu-item>
+                        </el-submenu>
+                        <el-submenu index="4">
+                            <template slot="title"><a href="#/no5">联系我们</a></template>
+                            <el-menu-item index="4-1">联系我们</el-menu-item>
+                            <el-menu-item index="4-2">加入我们</el-menu-item>
+                        </el-submenu>
+                    </el-menu>
+                </div>
+            </div>
+        </div>
+        <div>
+            <router-view></router-view>
+        </div>
+        <footer>
+            <div class="footer-food">
+                <div class="footer-left">
+                    <img
+                        src="https://ccdn.goodq.top/caches/c0b2c37cae1f3b474c3b0522b670a440/aHR0cHM6Ly81NGQ0YTNiMjEwY2FlLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTcvMDIvNDVhMmMwMTAxMmY5MzkwNGRhZWNmYzBhZDliZDhhOTYtMTAxeDM2LnBuZw_p_p100_p_3D_p_p100_p_3D.png">
+                </div>
+                <div class="footer-right">
+                    <p>版权所有 ©2014 地址：上海市松江区佘山林荫大道18号 京ICP备********号 </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- 组件区 -->
+    <!-- no1区 -->
+    <template id="no1">
+        <div>
+            <!-- 轮播图 -->
+            <div class="content">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img
+                                src="https://54d4a3b210cae.t73.qifeiye.com/qfy-content/uploads/2014/06/c8d6f54e0799fe165eb5d21936cdcf66.jpg"
+                                alt=""></div>
+                        <div class="swiper-slide"><img
+                                src="https://54d4a3b210cae.t73.qifeiye.com/qfy-content/uploads/2014/06/8f252a9db700ba559288dc9bbb4d655b.jpg">
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <!-- 导航 -->
+            <div>
+                <breath></breath>
+            </div>
+
+        </div>
+    </template>
+    <!-- 首页组件区 -->
+    <template id="breath">
+
+    </template>
+
+
+
+    <!-- no2区 -->
+    <template id="no2">
+        <div>
+            <div class="no2-content">
+                <div class="no2-box">
+                    <div class="no2-box_rirght">
+                        <div class="no2-item_top">
+                            <h2>关于我们</h2>
+                            <p>ABOUT US</p>
+                        </div>
+                        <div class="no2-item-bottom">
+                            <p style="color: blue">公司概况</p>
+                            <p>公司荣誉</p>
+                        </div>
+                    </div>
+                    <div class="no2-box_left">
+                        <item>
+                            <div slot="p">
+                                <p>
+                                    公司顺应医药流通发展趋势，投资2.3亿元建设省内具有领先水平的现代医药物流中心，
+                                    精心打造信息化管理、专业化服务、规模化运作的现代医药流通企业，立足波，辐射，
+                                    承担起浙江省的药品配送，成为物流平台，保障人民群众的用药需求。作为久负盛名的医药商业企业，
+                                    股份将站在一个全新的历史起点、跨越新高度，以创新求发展，为打造“百年”企业，开创新的历史篇章。
+                                </p>
+                            </div>
+                        </item>
+                        <item>
+                            <div slot="p">
+                                <p>
+                                    公司顺应医药流通发展趋势，投资2.3亿元建设省内具有领先水平的现代医药物流中心，
+                                    精心打造信息化管理、专业化服务、规模化运作的现代医药流通企业，立足波，辐射，
+                                    承担起浙江省的药品配送，成为物流平台，保障人民群众的用药需求。作为久负盛名的医药商业企业，
+                                    股份将站在一个全新的历史起点、跨越新高度，以创新求发展，为打造“百年”企业，开创新的历史篇章。
+                                </p>
+                            </div>
+                        </item>
+                        <item>
+                            <div slot="p">
+                                <p>
+                                    公司顺应医药流通发展趋势，投资2.3亿元建设省内具有领先水平的现代医药物流中心，
+                                    精心打造信息化管理、专业化服务、规模化运作的现代医药流通企业，立足波，辐射，
+                                    承担起浙江省的药品配送，成为物流平台，保障人民群众的用药需求。作为久负盛名的医药商业企业，
+                                    股份将站在一个全新的历史起点、跨越新高度，以创新求发展，为打造“百年”企业，开创新的历史篇章。
+                                </p>
+                            </div>
+                        </item>
+                        <div class="item-img">
+                            <img src="https://ccdn.goodq.top/caches/c0b2c37cae1f3b474c3b0522b670a440/aHR0cDovLzU0ZDRhM2IyMTBjYWUudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNC8wNi9wMTYuanBnP2F0dGFjaG1lbnRfaWQ9NTkxNw_p_p100_p_3D_p_p100_p_3D.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- no2组件 -->
+    <template id="item">
+        <div>
+            <div class="slot-item">
+                <slot name="p"></slot>
+            </div>
+        </div>
+    </template>
+
+
+    <!-- no3区 -->
+    <template id="no3">
+        <div>
+            <div class="no3-content">
+                <div class="no3-box">
+                    <div class="no2-box_rirght">
+                        <div class="no2-item_top">
+                            <h2>产品展示</h2>
+                            <p>PRODUCTS</p>
+                        </div>
+                        <div class="no2-item-bottom">
+                            <p style="color: blue">医院常用医疗器械</p>
+                            <p>家庭保健器材</p>
+                            <p>家庭护理设备</p>
+                        </div>
+                    </div>
+                    <div class="no3-left">
+                        <no3-item></no3-item>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- no3组件区 -->
+    <template id="no3-item">
+        <div>
+            <div class="no3-left_item" v-for="i in it">
+                <div class="no3-left_img">
+                    <img :src="i.a" alt="">
+                </div>
+                <div class="no3-item_text">
+                    <p>{{i.b}}</p>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- no4区 -->
+    <template id="no4">
+        <div>
+            <div>
+                <div class="no3-content">
+                    <div class="no3-box">
+                        <div class="no2-box_rirght">
+                            <div class="no2-item_top">
+                                <h2>新闻状态</h2>
+                                <p>NEWS</p>
+                            </div>
+                            <div class="no2-item-bottom">
+                                <p style="color: blue">公司新闻</p>
+                                <p>行业动态</p>
+                            </div>
+                        </div>
+                        <div class="no2-box_left">
+                            <no4-item></no4-item>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- no4组件区 -->
+    <template id="no4-item">
+        <div>
+            <div class="no4-t" v-for="i in arr">
+                <div class="no4-left">
+                    <img :src="i.a" alt="">
+                </div>
+                <div class="no4-right">
+                        <div class="no4-title">
+                            <h1>{{i.b}}</h1>
+                        </div>
+                        <div class="no4-time">
+                            <p>{{i.c}}</p>
+                        </div>
+                        <div class="no4-text">
+                            <p>{{i.d}}</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- no5区 -->
+    <template id="no5">
+        <div>
+            <div>
+                <div class="no3-content">
+                    <div class="no3-box">
+                        <div class="no2-box_rirght">
+                            <div class="no2-item_top">
+                                <h2>联系我们</h2>
+                                <p>CONTACT US</p>
+                            </div>
+                            <div class="no2-item-bottom">
+                                <p style="color: blue">联系我们</p>
+                                <p>加入我们</p>
+                            </div>
+                        </div>
+                        <div class="no2-box_left">
+                            <div class="no5-bot_top">
+                                <h2><strong>医疗器械有限公司</strong></h2>
+                                <p>地址：临江市工业园区中心大道西</p>
+                                <p>电话：4001-220-125</p>
+                                <p>邮箱：youjia@youjia.com</p>
+                            </div>  
+                            <div class="no5-box_bottom">
+
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- no5组件区 -->
+    <template>
+        <div>
+
+        </div>
+    </template>
+
+</body>
+
+</html>
+<script src="vue.js"></script>
+<script src="vue-router.js"></script>
+<script src="node_modules/element-ui/lib/index.js"></script>
+<script src="node_modules/swiper/js/swiper.min.js"></script>
+<script src="index.js"></script>
+<script>
+    new Vue({
+        el: '#box',
+        router,
+        data() {
+            return {
+                activeIndex: '1',
+                activeIndex2: '1'
+            };
+        },
+        methods: {
+            handleSelect(key, keyPath) {
+                console.log(key, keyPath);
+            },
+        }
+    })
+
+
+
+
+
+    var swiper = new Swiper('.swiper-container', {
+        spaceBetween: 30,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+
+
+</script>
+</script>

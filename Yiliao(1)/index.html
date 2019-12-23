@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="no1.css">
+    <link rel="stylesheet" href="no2.css">
+    <link rel="stylesheet" href="no3.css">
+    <link rel="stylesheet" href="no4.css">
+    <link rel="stylesheet" href="no5.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        /* 盒子容器 */
+        #box {
+            width: 100%
+        }
+
+        /* 页头 */
+        #title {
+            width: 100%;
+            height: 61px;
+            overflow: hidden;
+        }
+
+        .tit {
+            padding-left: 60px;
+            padding-right: 60px;
+            overflow: hidden;
+        }
+
+        .mar {
+            width: 1190px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .logo {
+            width: 344px;
+            height: 34px;
+            float: left;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+        }
+
+        .logo img {
+            width: 206px;
+            height: 100%;
+        }
+
+        /* 导航 */
+        .nav {
+            float: right;
+            width: 845px;
+            overflow: hidden;
+        }
+
+        .nav ul {
+            width: 550px;
+            overflow: hidden;
+            float: right;
+        }
+
+        .nav ul li a {
+            float: left;
+            font-size: 15px;
+            margin-right: 45px;
+            color: #ccc;
+            line-height: 54px;
+            text-align: center;
+        }
+
+        .nav ul li:first-child {
+            color: #e30083;
+        }
+
+        .nav ul li a:hover {
+            color: #e30083;
+            transition: 1s;
+        }
+
+
+
+        .no7-border {
+            border: 1px solid #cccccc;
+            padding: 50px 40px 40px 40px;
+        }
+
+
+
+
+
+        /* 底部 */
+        footer {
+            width: 100%;
+            height: 191px;
+        }
+
+        .foodbox {
+            width: 1190px;
+            margin: 0 auto;
+            height: 191px;
+        }
+
+        .foodone {
+            width: 253px;
+        }
+
+        .foodtit {
+            width: 253px;
+            margin-bottom: 25px;
+        }
+
+        .foodtext {
+            width: 253px;
+            float: left;
+            margin-right: 100px;
+        }
+
+        .foodtext h3 {
+            margin-bottom: 30px;
+        }
+
+        .foodtext span {
+            color: #ccc;
+            font-size: 12px;
+            line-height: 30px;
+        }
+
+        .foodhtml {
+            float: left;
+            width: 253px;
+            margin-right: 50px;
+
+        }
+
+        .foodhtml p {
+            color: #ccc;
+            font-size: 12px;
+            line-height: 30px;
+        }
+
+        .foodhtml h3 {
+            margin-bottom: 30px;
+        }
+
+        .foodright {
+            float: left;
+        }
+
+        .foodright h3 {
+            margin-bottom: 50px;
+        }
+
+        .foodimg img {
+            width: 76px;
+            height: 76px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <!-- 页头 -->
+        <div id="title">
+            <div class="tit">
+                <div class="mar">
+                    <div class="logo">
+                        <img
+                            src="https://ccdn.goodq.top/caches/40c05a76d970c388d38b924930a6f580/aHR0cHM6Ly81N2E3ZTZhYWYyZjc4LnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTcvMDYvYTNkMjAyZDQ0M2I5NzNiYThiYjkyNGUzYWU3N2UzYjYucG5n.png">
+                    </div>
+                    <div class="nav">
+                        <ul>
+                            <li><a href="#/">首页</a></li>
+                            <li><a href="#/no2">产品系列</a></li>
+                            <li><a href="#/no3">新闻中心</a></li>
+                            <li><a href="#/no4">加入我们</a></li>
+                            <li><a href="#/no5">联系我们</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <router-view></router-view>
+        </div>
+
+        <footer>
+            <div class="foodbox">
+                <div class=foodtext>
+                    <h3>关于我们</h3>
+                    <span>可视化图文内容编辑让网站制作和维护成为一件轻松的事。普通用户还是专业制作人员都能使用起飞页设计出最具专业水准的网站。</span>
+                </div>
+                <div class="foodhtml">
+                    <h3>联系我们</h3>
+                    <p>咨询电话 : 4000-000-100</p>
+                    <p>商务合作 : abc@abcde.com</p>
+                    <p>联系我们 : abcd@abcde.com</p>
+                </div>
+                <div class="foodhtml">
+                    <h3>帮助与支持</h3>
+                    <p>帮助我们</p>
+                    <p>服务条款</p>
+                    <p>条件问题</p>
+                </div>
+                <div class="foodright">
+                    <h3>关注我们</h3>
+                    <div class="foodimg">
+                        <img
+                            src="https://ccdn.goodq.top/caches/40c05a76d970c388d38b924930a6f580/aHR0cDovLzU3YTdlNmFhZjJmNzgudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNi8wOS84ZjM0YTQ3OWZiZjExZWE5NzUwMmI2ZWUyYWIwODJhNS5qcGc_p_p100_p_2FYXR0YWNobWVudF9pZD0xMDg3Mw_p_p100_p_3D_p_p100_p_3D.jpg">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+    <!-- 首页 -->
+    <template id="no1">
+        <div>
+            <!-- 轮播图 -->
+            <div class="content">
+                <div class="banner">
+                    <div class="top">
+                        <h1>
+                            主推产品
+                        </h1>
+                        <h3>
+                            PRODUCT
+                        </h3>
+                    </div>
+                    <div class="center">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img
+                                        src="https://ccdn.goodq.top/caches/40c05a76d970c388d38b924930a6f580/aHR0cHM6Ly81N2E3ZTZhYWYyZjc4LnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMDkvNzY5MDExMmQ0MjIzN2Y5YTg0OWVjNjc0N2NmOGMxYWYucG5n.png">
+                                </div>
+                                <div class="swiper-slide"><img
+                                        src="https://ccdn.goodq.top/caches/40c05a76d970c388d38b924930a6f580/aHR0cHM6Ly81N2E3ZTZhYWYyZjc4LnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMDkvODBkMjY5NjYzNDJmNTM1ZjdkYmEwMjY2OTNmMmQ5ZjcucG5n.png">
+                                </div>
+                                <div class="swiper-slide"><img
+                                        src="https://ccdn.goodq.top/caches/40c05a76d970c388d38b924930a6f580/aHR0cHM6Ly81N2E3ZTZhYWYyZjc4LnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMDkvZmVkNjAyMDAyZTZiNjRkYjVhZDg0MmEwN2U5Yjg5ODYucG5n.png">
+                                </div>
+                            </div>
+                            <!-- Add Arrows -->
+                            <!-- <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div> -->
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <p class="p">
+                            u
+                            <p class="m">
+                                m
+                            </p>
+                            <h6 class="h">
+                                360
+                            </h6>
+                        </p>
+                    </div>
+                    <div class="bottom-two">
+                        <p>精细快速低剂量成像，高效安全扫描体验</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 案例 -->
+            <div class="icon">
+                <div class="demo">
+                    <ul>
+                        <li>
+                            12000+
+                            <p>成功案例</p>
+                        </li>
+                        <li>
+                            010+
+                            <p>解决方案</p>
+                        </li>
+                        <li>
+                            200+
+                            <p>合作伙伴</p>
+                        </li>
+                        <li>
+                            050
+                            <p>技术专利</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <no6>
+                    <p slot="no6-top">NEWS</p>
+                    <p slot="no6-bottom">产品系列</p>
+                </no6>
+            </div>
+            <div style="padding: 0 120px">
+                <xg style="width: 1220px;margin: 0 auto;"></xg>
+            </div>
+
+            <div>
+                <no6>
+                    <p slot="no6-top">PRODUCT</p>
+                    <p slot="no6-bottom">产品系列</p>
+                </no6>
+            </div>
+
+            <div class="sb-conner">
+                <div class="sb-cont">
+                    <letter>
+
+                    </letter>
+                </div>
+            </div>
+
+        </div>
+    </template>
+    <!-- 产品系列 -->
+    <template id="no2">
+        <div>
+            <div class="no2-banner">
+                <div class="no2-content">
+                    <div class="no2-left">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img
+                                        src="https://ccdn.goodq.top/caches/40c05a76d970c388d38b924930a6f580/aHR0cHM6Ly81N2E3ZTZhYWYyZjc4LnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMDkvNzY5MDExMmQ0MjIzN2Y5YTg0OWVjNjc0N2NmOGMxYWYucG5n.png">
+                                </div>
+                                <div class="swiper-slide"><img
+                                        src="https://ccdn.goodq.top/caches/40c05a76d970c388d38b924930a6f580/aHR0cHM6Ly81N2E3ZTZhYWYyZjc4LnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMDkvODBkMjY5NjYzNDJmNTM1ZjdkYmEwMjY2OTNmMmQ5ZjcucG5n.png">
+                                </div>
+                                <div class="swiper-slide"><img
+                                        src="https://ccdn.goodq.top/caches/40c05a76d970c388d38b924930a6f580/aHR0cHM6Ly81N2E3ZTZhYWYyZjc4LnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMDkvZmVkNjAyMDAyZTZiNjRkYjVhZDg0MmEwN2U5Yjg5ODYucG5n.png">
+                                </div>
+                            </div>
+                            <!-- Add Arrows -->
+                            <!-- <div class="swiper-button-next"></div>
+                                            <div class="swiper-button-prev"></div> -->
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <div class="no2-right">
+                        <div class="no2-bottom">
+                            <p class="p">
+                                u
+                                <p class="m">
+                                    m
+                                </p>
+                                <h6 class="h">
+                                    360
+                                </h6>
+                            </p>
+                        </div>
+                        <div class="no2-bottom-two">
+                            <p>精细快速低剂量成像，高效安全扫描体验</p>
+                        </div>
+                        <div class="no2-item">
+                            <ul>
+                                <li><img
+                                        src="https://ccdn.goodq.top/caches/40c05a76d970c388d38b924930a6f580/aHR0cHM6Ly81N2E3ZTZhYWYyZjc4LnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTcvMDcvOTcxNDE3ZTk3OWE1ZjFiZjNhNjZkZjY1YTM4ZjY5N2UtMzAweDE1MC5wbmc_p_p100_p_3D.png">
+                                </li>
+                                <li><img
+                                        src="https://ccdn.goodq.top/caches/40c05a76d970c388d38b924930a6f580/aHR0cHM6Ly81N2E3ZTZhYWYyZjc4LnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTcvMDcvYzU3ZTYxMjM3OWM0Mzg5MDdlNTFkODNjOThiNmVlMjQtMzAweDE1MC5wbmc_p_p100_p_3D.png">
+                                </li>
+                                <li><img
+                                        src="https://ccdn.goodq.top/caches/40c05a76d970c388d38b924930a6f580/aHR0cHM6Ly81N2E3ZTZhYWYyZjc4LnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTcvMDcvY2M4MmZhNTU4ODJiNGNiYTdlMzk5ZmRkMGIzMjNmNTMtMzAweDE1MC5wbmc_p_p100_p_3D.png">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <no6>
+                    <p slot="no6-top">PRODUCT</p>
+                    <p slot="no6-bottom">产品系列</p>
+                </no6>
+            </div>
+            <div class="fenlei">
+                <ul>
+                    <li>全部设备</li>
+                    <li>设备分类一</li>
+                    <li>设备分类二</li>
+                    <li>设备分类三</li>
+                </ul>
+            </div>
+            <div class="no2-manyue">
+                <div class="no2-do">
+                    <toxic></toxic>
+                </div>
+            </div>
+
+        </div>
+    </template>
+    <!-- 动态路由no2 -->
+    <template id="dong_1">
+        <div>
+            {{$route.params.title}}
+        </div>
+    </template>
+
+
+
+    <!-- 新闻中心 -->
+    <template id="soo">
+        <div>
+            <div class="soo-banner">
+                <div class="soo-left">
+                    <img :src="i.q">
+                </div>
+                <div class="soo-right">
+                    <div>
+                        {{i.w}}
+                    </div>
+                    <div>
+                        {{i.e}}
+                    </div>
+                    <div>
+                        {{i.r}}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </template>
+    <template id="so1">
+        <div>
+
+        </div>
+    </template>
+    <template id="no3">
+        <div>
+            <div class="no3-content">
+                <div class="no3-html">
+                    <div class="no3-nav">
+                        <div class="no3-tit">
+                            <p>全部资讯</p>
+                            <span>▼</span>
+                        </div>
+                        <div class="no3-gg" @click="index=0">
+                            <span :style="{color:index==0?'red':''}">
+                                企业动态
+                            </span>
+                        </div>
+                        <div class="no3-gg" @click="index=1">
+                            <span :style="{color:index==1?'red':''}">
+                                行业资讯
+                            </span>
+                        </div>
+                    </div>
+                    <div class="quanbu" v-if="index==0">
+                        <soo v-for="i in zixun" :i="i" :key="i.id"></soo>
+                    </div>
+                    <div class="quanbu" v-else-if="index==1">
+                        <soo v-for="j in hangye" :i="j" :key="j.id"></soo>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <!-- 加入我们 -->
+    <template id="no4">
+        <div>
+            <div class="no4-content">
+                <div class="no4-bbq">
+                    <div class="no4-left">
+                        <p>加入我们</p>
+                        <span>▼</span>
+                    </div>
+                    <div class="no4-right">
+                        <div class="no4-one">
+                            <plc>
+                                <div slot="tit">
+                                    <p>区域销售经理</p>
+                                    <p>发布日期：2016-08-10</p>
+                                </div>
+                                <div slot="solit"></div>
+                                </slot>
+                                <div slot="co">
+                                    <p>公司事业部：<span>某某公司</span></p>
+                                    <p>职位性质：<span>制造/生产/加工</span></p>
+                                    <p>工作地点：<span>北京</span></p>
+                                    <p>招聘人数：<span>10人</span></p>
+                                </div>
+                                <div slot="zhaopin">
+                                    <p>职位概述：</p>
+                                    <p class="daa">负责公司全产品华东区域分销工作。</p>
+                                </div>
+                                <div slot="miaoshu">
+                                    <p class="sma">职位描述：</p>
+                                    <p>1. 负责指定地区设备的市场推广工作，完成各项销售目标</p>
+                                    <p>2. 负责完成订单并跟进，确保产品能够及时安装，提高客户满意度；</p>
+                                    <p>3. 参与招投标工作，协调市场、产品、销售、物流和服务部门参与项目后期工作；</p>
+                                    <p>4. 参与区域市场营销活动,了解参与此类活动的客户信息和动态；</p>
+                                    <p>5. 定期拜访客户，收集客户需求信息并形成拜访报告,协调相关部门解决客户提出的问题；</p>
+                                    <p>6. 参加销售培训，完成市场信息的收集和分析，周期性向销售经理汇报总结。', </p>
+                                </div>
+                                <div slot="tiaojian">
+                                    <p class="sma">任职条件</p>
+                                    <p>1. 理工科相关专业，大学本科以上学历；</p>
+                                    <p>2. 5年以上相关行业销售岗位经验，有大型设备销售经验者优先；</p>
+                                    <p>3. 掌握公司所在的行业动态，了解公司所经营的产品技术特点；</p>
+                                    <p>4. 优秀的沟通与执行能力，良好的客户服务意识，高度的敬业精神；</p>
+                                    <p>5. 熟练使用WORD，EXCEL，POWERPOINT等办公软件，良好的英语应用能力。</p>
+                                </div>
+                                <div slot="dd">
+                                </div>
+                                <div slot="ff">
+                                    <p>申请该职位</p>
+                                </div>
+                            </plc>
+                        </div>
+                        <div class="no4-one">
+                            <plc>
+                                <div slot="tit">
+                                    <p>区域销售经理</p>
+                                    <p>发布日期：2016-08-10</p>
+                                </div>
+                                <div slot="solit"></div>
+                                </slot>
+                                <div slot="co">
+                                    <p>公司事业部：<span>某某公司</span></p>
+                                    <p>职位性质：<span>制造/生产/加工</span></p>
+                                    <p>工作地点：<span>北京</span></p>
+                                    <p>招聘人数：<span>10人</span></p>
+                                </div>
+                                <div slot="zhaopin">
+                                    <p>职位概述：</p>
+                                    <p class="daa">负责公司全产品华东区域分销工作。</p>
+                                </div>
+                                <div slot="miaoshu">
+                                    <p class="sma">职位描述：</p>
+                                    <p>1. 负责指定地区设备的市场推广工作，完成各项销售目标</p>
+                                    <p>2. 负责完成订单并跟进，确保产品能够及时安装，提高客户满意度；</p>
+                                    <p>3. 参与招投标工作，协调市场、产品、销售、物流和服务部门参与项目后期工作；</p>
+                                    <p>4. 参与区域市场营销活动,了解参与此类活动的客户信息和动态；</p>
+                                    <p>5. 定期拜访客户，收集客户需求信息并形成拜访报告,协调相关部门解决客户提出的问题；</p>
+                                    <p>6. 参加销售培训，完成市场信息的收集和分析，周期性向销售经理汇报总结。', </p>
+                                </div>
+                                <div slot="tiaojian">
+                                    <p class="sma">任职条件</p>
+                                    <p>1. 理工科相关专业，大学本科以上学历；</p>
+                                    <p>2. 5年以上相关行业销售岗位经验，有大型设备销售经验者优先；</p>
+                                    <p>3. 掌握公司所在的行业动态，了解公司所经营的产品技术特点；</p>
+                                    <p>4. 优秀的沟通与执行能力，良好的客户服务意识，高度的敬业精神；</p>
+                                    <p>5. 熟练使用WORD，EXCEL，POWERPOINT等办公软件，良好的英语应用能力。</p>
+                                </div>
+                                <div slot="dd">
+                                </div>
+                                <div slot="ff">
+                                    <p>申请该职位</p>
+                                </div>
+                            </plc>
+                        </div>
+                        <div class="no4-one">
+                            <plc>
+                                <div slot="tit">
+                                    <p>区域销售经理</p>
+                                    <p>发布日期：2016-08-10</p>
+                                </div>
+                                <div slot="solit"></div>
+                                </slot>
+                                <div slot="co">
+                                    <p>公司事业部：<span>某某公司</span></p>
+                                    <p>职位性质：<span>制造/生产/加工</span></p>
+                                    <p>工作地点：<span>北京</span></p>
+                                    <p>招聘人数：<span>10人</span></p>
+                                </div>
+                                <div slot="zhaopin">
+                                    <p>职位概述：</p>
+                                    <p class="daa">负责公司全产品华东区域分销工作。</p>
+                                </div>
+                                <div slot="miaoshu">
+                                    <p class="sma">职位描述：</p>
+                                    <p>1. 负责指定地区设备的市场推广工作，完成各项销售目标</p>
+                                    <p>2. 负责完成订单并跟进，确保产品能够及时安装，提高客户满意度；</p>
+                                    <p>3. 参与招投标工作，协调市场、产品、销售、物流和服务部门参与项目后期工作；</p>
+                                    <p>4. 参与区域市场营销活动,了解参与此类活动的客户信息和动态；</p>
+                                    <p>5. 定期拜访客户，收集客户需求信息并形成拜访报告,协调相关部门解决客户提出的问题；</p>
+                                    <p>6. 参加销售培训，完成市场信息的收集和分析，周期性向销售经理汇报总结。', </p>
+                                </div>
+                                <div slot="tiaojian">
+                                    <p class="sma">任职条件</p>
+                                    <p>1. 理工科相关专业，大学本科以上学历；</p>
+                                    <p>2. 5年以上相关行业销售岗位经验，有大型设备销售经验者优先；</p>
+                                    <p>3. 掌握公司所在的行业动态，了解公司所经营的产品技术特点；</p>
+                                    <p>4. 优秀的沟通与执行能力，良好的客户服务意识，高度的敬业精神；</p>
+                                    <p>5. 熟练使用WORD，EXCEL，POWERPOINT等办公软件，良好的英语应用能力。</p>
+                                </div>
+                                <div slot="dd">
+                                </div>
+                                <div slot="ff">
+                                    <p>申请该职位</p>
+                                </div>
+                            </plc>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <!-- 联系我们 -->
+    <template id="no5">
+        <div>
+            <div class="no5-box">
+                <div class="no5-banner" style="margin-bottom: 70px">
+                    <img src="https://ccdn.goodq.top/caches/40c05a76d970c388d38b924930a6f580/aHR0cHM6Ly81N2E3ZTZhYWYyZjc4LnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMDkvZjkyMmI3YTQyZDYxMDQ0MWVmMzI0NjdkZDYxMDJmYzYuanBn.jpg">
+                </div>
+                <div class="no5-boo" style="margin-bottom: 150px">
+                    <div class="no5-left">
+                        <div class="no5-s1">
+                            <p>加入我们</p>
+                            <span>▼</span>
+                        </div>
+                        <div class="no5-s2">
+                            <p>Um生物科技有限公司</p>
+                            <span>Um biotechnology Co.,Ltd</span>
+                        </div>
+                        <div class="no5-s3">
+                            <p>联系电话 : 1000 8000</p>
+                            <p>销售热线：400 8888 8888</p>
+                            <p>技术服务：400 6666 6666</p>
+                            <p>公司传真：1000 8000</p>
+                        </div>
+                        <div class="no5-s4">
+                            <p>苏州市工业园区金鸡湖大道0号某某大厦0室</p>
+                        </div>
+                    </div>
+                    <div class="no5-right">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </template>
+
+
+    <template id="no6">
+
+    </template>
+
+    <template id="xg">
+
+    </template>
+
+    <template id="letter">
+
+    </template>
+
+
+    <template id="toxic">
+        <div>
+            <div class="do">
+                <div class="no2-you" v-for="i in con">
+                    <a :href="'#/dong_1/'+i.b">
+                        <div class="me">
+                            <div class="no2-have">
+                                <img :src="i.a">
+                            </div>
+                            <div class="no2-apple">
+                                {{i.b}}
+                            </div>
+                            <div class="no2-no">
+                                {{i.c}}
+                            </div>
+                        </div>
+                        <div class="posi"></div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </template>
+
+
+    <template id="plc">
+        <div>
+            <div class="tit">
+                <slot name="tit"></slot>
+            </div>
+            <div class="solit">
+                <slot name="solit"></slot>
+            </div>
+            <div class="co">
+                <slot name="co"></slot>
+            </div>
+            <div class="zhaopin">
+                <slot name="zhaopin"></slot>
+            </div>
+            <div class="miaoshu">
+                <slot name="miaoshu"></slot>
+
+            </div>
+            <div class="tiaojian">
+                <slot name="tiaojian"></slot>
+            </div>
+            <div class="dd">
+                <slot name="dd"></slot>
+            </div>
+            <div class="ff">
+                <slot name="ff"></slot>
+            </div>
+        </div>
+    </template>
+
+</body>
+
+</html>
+<script src="vue.js"></script>
+<script src="vue-router.js"></script>
+<script src="index.js"></script>
+<script src="node_modules/swiper/js/swiper.min.js"></script>
+
+<script>
+    new Vue({
+        el: '#box',
+        router,
+
+    })
+
+
+
+    var swiper = new Swiper('.swiper-container', {
+        cssMode: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination'
+        },
+        mousewheel: true,
+        keyboard: true,
+    });
+
+</script>
